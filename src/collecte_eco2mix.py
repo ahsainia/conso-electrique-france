@@ -3,7 +3,7 @@ import requests
 URL = "https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco2mix-national-cons-def/exports/csv"
 
 params = {
-    "select": "date_heure,consommation,nucleaire,eolien,solaire,hydraulique,gaz,charbon,fioul,bioenergies,ech_physiques,taux_co2",
+    "select": "date_heure,consommation,prevision_j1,nucleaire,eolien,solaire,hydraulique,gaz,charbon,fioul,bioenergies,ech_physiques,taux_co2",
     "where": "date_heure >= date'2023-01-01' AND date_heure < date'2025-01-01'",
     "order_by": "date_heure",
 }
