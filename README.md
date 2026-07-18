@@ -17,7 +17,7 @@ de la collecte par API jusqu'à un duel contre les prévisions officielles de RT
 - **Duel contre RTE : les pros restent 1,7× meilleurs** (647 MW d'erreur corrigée).
   Un écart honnête pour 5 features linéaires face à des équipes dédiées.
 - **Découverte d'un biais de mesure de +1 139 MW** entre les prévisions RTE et les
-  données consolidées : sans sa correction, on aurait conclu à tort "battre" RTE.
+  données consolidées : sans la correction de ce biais, on aurait conclu à tort "battre" RTE.
 
 ![Thermosensibilité](figures/thermosensibilite.png)
 
@@ -42,8 +42,7 @@ Les données sont collectées par API via les scripts de `src/` (~70 000 mesures
 
 Le fil conducteur : chaque modèle est jugé contre une baseline, chaque erreur est
 décomposée (par jour, par mois) pour guider l'amélioration suivante. C'est l'analyse
-d'erreur qui a révélé le poids des jours fériés (le mois de mai était le plus
-imprévisible !) et inspiré les features de la v2.
+d'erreur qui a révélé le poids des jours fériés (le mois de mai, sans météo extrême, était pourtant le plus imprévisible) et inspiré les features de la v2.
 
 ## Reproduire
 
