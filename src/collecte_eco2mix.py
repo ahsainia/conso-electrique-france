@@ -14,7 +14,7 @@ print("Téléchargement en cours...")
 reponse=requests.get(URL,params=params)
 
 
-reponse.status_code
+
 
 if reponse.status_code != 200:
     print(f"Erreur : le serveur a répondu {reponse.status_code}")
